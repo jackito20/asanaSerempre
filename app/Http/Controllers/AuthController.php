@@ -38,6 +38,7 @@ class AuthController extends Controller
       return response()->json(['route' => $route], 200);
       //return \Socialite::with('github')->redirect();
     }
+    //dd(\Socialite::with('asana')->stateless()->user()->tasks());
     $data = \Socialite::with('asana')->stateless()->user();
 
     $user = User::where('email', 'LIKE', $data->email)->first();
