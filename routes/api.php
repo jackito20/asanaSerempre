@@ -17,9 +17,15 @@ use Illuminate\Http\Request;
     return $request->user();
 });*/
 
+Route::get('loginAsana', 'AuthController@getLoginAsana');
 
 Route::group(['prefix' => 'auth'], function () {
+
+
+  /*en Chrome usa post en Mozzilla usa get*/
+  Route::post('login', 'AuthController@login');
   Route::get('login', 'AuthController@login');
+
   Route::post('signup', 'AuthController@signup');
 
   Route::group(['middleware' => 'auth:api'], function() {

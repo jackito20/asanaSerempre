@@ -14,13 +14,33 @@ class TaskController extends Controller
      */
     public function index(Request $request)
     {
-        //dd($request->all());
-        //$data = \Socialite::with('asana')->stateless()->getUserByToken($request->token);
-        $asana_client = Client::accessToken($request->token);
-        $projects = $asana_client->get('/projects', []);
-        $tasks = $asana_client->get('/projects/' . $projects[5]->id . '/tasks', []);
+        $asana_client = Client::accessToken(decrypt(auth()->user()->assana_access));
+        $user = $asana_client->users->me();
+        $userWorkspaces = array_filter($user->workspaces, function($item) { return $item->name === 'Personal Projects'; });
+        $userWorkspaces = $user->workspaces;
+        $projects = $asana_client->projects->findByWorkspace($userWorkspaces[0]->id, null, array('iterator_type' => false, 'page_size' => null))->data;
 
-        return response()->json($tasks);
-        //dd($projects);
+      $projects = $asana_client->get('/projects', []);
+      $tasks = $asana_client->get('/projects/' . $projects[4]->id . '/tasks', []);
+
+        var_dump("////----USER---////");
+        var_dump($user);
+        var_dump("////----WORKSPACES---////");
+        var_dump($userWorkspaces);
+        var_dump("////----PROJECTS---////");
+        var_dump($projects);
+        var_dump("////----TASKS---////");
+        var_dump($tasks);
+
+        $taskOptions = ['name' => 'task prueba asana 3',
+                        'workspace' => $userWorkspaces[0]->id,
+                        'projects' =>[$projects[4]->id]]
+        $task = $asana_client->POST('/tasks', );
+
+        return response()->json($task);
+    }
+
+    public function store(Request $request){
+
     }
 }
