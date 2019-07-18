@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4d6664697c324ca83da6c91a0867c87f",
+    "content-hash": "17f8fb5d73034618b57399bc611edf22",
     "packages": [
         {
             "name": "adoy/oauth2",
@@ -1645,16 +1645,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.21.0",
+            "version": "2.21.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "da6410b77f74eecd98d24ffb6dfecefccf3ca17f"
+                "reference": "a8bfb6631e3bc982427406d13ad817fc45d47b61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/da6410b77f74eecd98d24ffb6dfecefccf3ca17f",
-                "reference": "da6410b77f74eecd98d24ffb6dfecefccf3ca17f",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/a8bfb6631e3bc982427406d13ad817fc45d47b61",
+                "reference": "a8bfb6631e3bc982427406d13ad817fc45d47b61",
                 "shasum": ""
             },
             "require": {
@@ -1708,7 +1708,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2019-07-14T17:06:46+00:00"
+            "time": "2019-07-17T07:49:05+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -4423,16 +4423,16 @@
         },
         {
             "name": "laravel/homestead",
-            "version": "v8.6.0",
+            "version": "v9.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/homestead.git",
-                "reference": "01227bf1fdcddf61ad1238940fbfb538fc6d953b"
+                "reference": "8a673ed889d7c9edb300ccaf645e443cab3f87f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/homestead/zipball/01227bf1fdcddf61ad1238940fbfb538fc6d953b",
-                "reference": "01227bf1fdcddf61ad1238940fbfb538fc6d953b",
+                "url": "https://api.github.com/repos/laravel/homestead/zipball/8a673ed889d7c9edb300ccaf645e443cab3f87f8",
+                "reference": "8a673ed889d7c9edb300ccaf645e443cab3f87f8",
                 "shasum": ""
             },
             "require": {
@@ -4469,7 +4469,7 @@
                 }
             ],
             "description": "A virtual machine for web artisans.",
-            "time": "2019-06-21T00:49:25+00:00"
+            "time": "2019-07-10T00:08:13+00:00"
         },
         {
             "name": "mockery/mockery",

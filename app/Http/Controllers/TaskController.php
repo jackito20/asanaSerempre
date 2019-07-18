@@ -34,8 +34,8 @@ class TaskController extends Controller
 
         $taskOptions = ['name' => 'task prueba asana 3',
                         'workspace' => $userWorkspaces[0]->id,
-                        'projects' =>[$projects[4]->id]]
-        $task = $asana_client->POST('/tasks', );
+                        'projects' =>[$projects[4]->id]];
+        $task = $asana_client->POST('/tasks', $taskOptions);
 
         return response()->json($task);
     }
